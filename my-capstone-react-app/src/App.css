@@ -1,4 +1,84 @@
-#root {
+.formCard {
+  background-color: #f4f4f9; /* Lighter background for better contrast */
+  text-align: center;
+  padding: 2rem;
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.formCard h1 {
+  font-size: 2.5rem; /* Increase the font size */
+  font-weight: bold; /* Make the font bold */
+  margin-bottom: 1rem; /* Add some spacing below the heading */
+  text-transform: uppercase; /* Optional: Make the text uppercase */
+  color: #333; /* Optional: Set a darker color for better contrast */
+}
+
+.stockList h2{
+  font-size: 2rem; /* Increase the font size */
+  font-weight: bold; /* Make the font bold */
+  margin-bottom: 1rem; /* Add some spacing below the heading */
+  text-transform: uppercase; /* Optional: Make the text uppercase */
+  color: #333; /* Optional: Set a darker color for better contrast */
+}
+
+/* Flex container for input fields */
+.inputGroup {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  justify-content: center; /* Center inputs horizontally */
+  flex-wrap: wrap; /* Wrap inputs to the next line if screen is small */
+}
+
+/* Style for individual inputs */
+.inputGroup input {
+  flex: 1;
+  max-width: 200px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for inputs */
+.inputGroup input:hover {
+  border-color: #4caf50; /* Green border on hover */
+  transform: scale(1.05); /* Slightly increase size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
+
+
+/* Style for the button */
+.inputGroup button {
+  padding: 0.5rem 1rem;
+  background-color: #4caf50; /* Green background for CTA */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for the button */
+.inputGroup button:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for emphasis */
+}
+
+/* Active state for button click */
+.inputGroup button:active {
+  background-color: #3e8e41; /* Darker green when clicked */
+  transform: scale(0.98); /* Slightly shrink on click for feedback */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adjust shadow for pressed state */
+}
+
+
+
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +119,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */
