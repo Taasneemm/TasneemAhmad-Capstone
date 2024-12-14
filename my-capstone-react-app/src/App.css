@@ -10,16 +10,16 @@
   font-size: 2.5rem; /* Increase the font size */
   font-weight: bold; /* Make the font bold */
   margin-bottom: 1rem; /* Add some spacing below the heading */
-  text-transform: uppercase; /* Optional: Make the text uppercase */
-  color: #333; /* Optional: Set a darker color for better contrast */
+  text-transform: uppercase; 
+  color: #333; 
 }
 
 .stockList h2{
   font-size: 2rem; /* Increase the font size */
   font-weight: bold; /* Make the font bold */
   margin-bottom: 1rem; /* Add some spacing below the heading */
-  text-transform: uppercase; /* Optional: Make the text uppercase */
-  color: #333; /* Optional: Set a darker color for better contrast */
+  text-transform: uppercase; 
+  color: #333; 
 }
 
 .stockList ol {
@@ -31,7 +31,7 @@
   margin-left: 0; /* Remove any extra left margin */
 }
 
-/* Flex container for input fields */
+/* Flex container for input fields and "Add stock" button */
 .inputGroup {
   display: flex;
   gap: 1rem;
@@ -40,35 +40,35 @@
   flex-wrap: wrap; /* Wrap inputs to the next line if screen is small */
 }
 
-/* Style for individual inputs */
-.inputGroup input {
+/* Style for all input fields */
+.inputGroup .inputField input {
   flex: 1;
-  max-width: 200px;
+  width: 300px;
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border: 3px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
   transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
-/* Hover effect for inputs */
+/* Hover effect for all input fields */
 .inputGroup input:hover {
   border-color: #4caf50; /* Green border on hover */
   transform: scale(1.05); /* Slightly increase size */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 
-/* Style for the button */
+/* Base style for the button */
 .inputGroup button {
   padding: 0.5rem 1rem;
-  background-color: #4caf50; /* Green background for CTA */
+  background-color: #4caf50; /* Green background */
   color: white;
   border: none;
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease; /* Quick transitions */
 }
 
 /* Hover effect for the button */
@@ -78,14 +78,27 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for emphasis */
 }
 
-/* Active state for button click */
+/* Active state for quick press */
 .inputGroup button:active {
   background-color: #3e8e41; /* Darker green when clicked */
-  transform: scale(0.98); /* Slightly shrink on click for feedback */
+  transform: scale(0.95); /* Slightly shrink for feedback */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adjust shadow for pressed state */
+  transition: transform 0.05s ease, box-shadow 0.05s ease, background-color 0.05s ease; /* Very fast press and release */
 }
 
 
 
 
 
+/* Styling for errors in input fields in form */
+.inputError {
+  border-color: red !important; /* Red border for error */
+  border-width: 2px !important; /* Thicker border for error */
+}
+
+/* Styling for error message pop up */
+.errorMessage {
+  color: red; /* Red text for error messages */
+  font-size: 0.8rem; /* Smaller font size */
+  margin-top: 0.25rem; /* Space between input and message */
+}
