@@ -1,4 +1,10 @@
-# React + Vite
+# Finance Dashboard Project
+
+## Introduction
+
+In this project, I'll build a finance dashboard using React and Vite. The dashboard will allow users to enter multiple stock purchases and display the current value and profit/ loss for each stock. This project aims to reinforce my understanding of React concepts such as components, conditional rendering, props, hooks (useState, useEffect, useCallback, useContext), and state management.
+
+### React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
