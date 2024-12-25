@@ -25,3 +25,45 @@ p {
     margin-bottom: 1rem;
   }
   
+   /* Styles for 1024px width */
+@media (max-width: 1024px) {
+  /* Add your styles here for screens between 769px and 1024px width */
+  .inputContainer {
+    flex-wrap: wrap;
+  }
+  .inputFieldContainer {
+    flex-wrap: wrap;
+  }
+  .stockListContainer {
+    width: 700px;
+  }
+}
+
+/* Styles for 768px width */
+@media (max-width: 768px) {
+  /* Add your styles here for screens between 426px and 768px width */
+}
+
+/* Styles for 425px width */
+@media (max-width: 425px) {
+  /* Add your styles here for screens between 376px and 425px width */
+  .stockListContainer {
+    width: 400px;
+  }
+}
+
+/* Styles for 375px width */
+@media (max-width: 375px) {
+  /* Add your styles here for screens between 321px and 375px width */
+  .stockListContainer {
+    width: 340px;
+  }
+}
+
+/* Styles for 320px width */
+@media (max-width: 320px) {
+  /* Add your styles here for screens 320px width and below */
+  .stockListContainer {
+    width: 280px;
+  }
+}
