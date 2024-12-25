@@ -87,12 +87,7 @@
     position: static; /* Flow naturally below the input */
     text-align: center; /* Align the message to the left */
     word-wrap: break-word; /* Allow long text to wrap */
-    /* color: red;
-    font-size: 1.5rem;
-    margin-top: 0.25rem;
-    position: absolute;
-    width: 120%;
-    bottom: -3.5rem; */
+    
   }
   
   .submitButton {
@@ -117,6 +112,7 @@
     background-color: #2e7d32;
   }
   
+/* ------------------------------------------------------------------------------*/
   /* Styles for 1024px width */
 @media (max-width: 1024px) {
   /* Add your styles here for screens between 769px and 1024px width */
