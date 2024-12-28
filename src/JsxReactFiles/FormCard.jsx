@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
 import StockList from "../JsxReactFiles/StockList.jsx";
 import { useStockContext } from "../Contexts/StockContext.jsx";
-import "../CssFiles/FormCard.css";
+// import "../CssFiles/FormCard.css";
+import "../CssFiles/FormCard1.css";
 
 function FormCard() {
 
@@ -117,56 +118,104 @@ function FormCard() {
   };
 
   return (
-    <div className="formCard">
+    <div className="formCard-container">
       <h1>Finance Dashboard</h1>
-      <form onSubmit={handleAddStock} className="inputContainer">
-        <div className="inputFieldContainer">
+      <form onSubmit={handleAddStock} className="inputFieldsAndBtnContainer"> {/* inputFieldsAndBtnContainer will be used as flex. Used only to position inputFields and buttons. All input fields and button will be flex items. Efficient responsive layout. Design for input fields and add stock btn will use a different className*/} 
+        <div className="inputFieldAndErrorMsgContainer"> {/* inputFieldAndErrorMsgContainer. Each input field and it's corresponding error msg will be in relative positioning.*/} 
           <input
-            className={`inputField ${errors.stockSymbol ? "inputError" : ""}`}
+            className={errors.stockSymbol ? "inputError" : "nonError"}
             type="text"
             placeholder="Stock Symbol (e.g., AAPL)"
             value={stockSymbol}
             onChange={(e) => setStockSymbol(e.target.value)}
           />
-          {errors.stockSymbol && (
-            <p className="errorMessage">{errors.stockSymbol}</p>
-          )}
+          {errors.stockSymbol && <p className="errorMessage">{errors.stockSymbol}</p>}
         </div>
-        <div className="inputFieldContainer">
+
+        <div className="inputFieldAndErrorMsgContainer">
           <input
-            className={`inputField ${errors.quantity ? "inputError" : ""}`}
+            className={errors.quantity ? "inputError" : "nonError"}
             type="number"
             placeholder="Quantity"
             value={quantity}
             onChange={(e) => setQuantity(e.target.value)}
           />
-          {errors.quantity && (
-            <p className="errorMessage">{errors.quantity}</p>
-          )}
+          {errors.quantity && <p className="errorMessage">{errors.quantity}</p>}
         </div>
-        <div className="inputFieldContainer">
+
+        <div className="inputFieldAndErrorMsgContainer">
           <input
-            className={`inputField ${errors.purchasePrice ? "inputError" : ""}`}
+            className={errors.purchasePrice ? "inputError" : "nonError"}
             type="number"
             step="0.01"
             placeholder="Purchase Price"
             value={purchasePrice}
             onChange={(e) => setPurchasePrice(e.target.value)}
           />
-          {errors.purchasePrice && (
-            <p className="errorMessage">{errors.purchasePrice}</p>
-          )}
+          {errors.purchasePrice && <p className="errorMessage">{errors.purchasePrice}</p>}
         </div>
-        <button className="submitButton" type="submit">
-          Add Stock
-        </button>
+
+        <button className="submitBtn" type="submit">Add Stock</button>
       </form>
+
+
       <h2>Stock List</h2>
-      <div>
-        <StockList />
-      </div>
+      <div><StockList /></div>
     </div>
   );
 }
 
 export default FormCard;
+
+// below is for reference code
+// return (
+//   <div className="formCard">
+//     <h1>Finance Dashboard</h1>
+//     <form onSubmit={handleAddStock} className="inputContainer">
+//       <div className="inputFieldContainer">
+//         <input
+//           className={`inputField ${errors.stockSymbol ? "inputError" : ""}`}
+//           type="text"
+//           placeholder="Stock Symbol (e.g., AAPL)"
+//           value={stockSymbol}
+//           onChange={(e) => setStockSymbol(e.target.value)}
+//         />
+//         {errors.stockSymbol && (
+//           <p className="errorMessage">{errors.stockSymbol}</p>
+//         )}
+//       </div>
+//       <div className="inputFieldContainer">
+//         <input
+//           className={`inputField ${errors.quantity ? "inputError" : ""}`}
+//           type="number"
+//           placeholder="Quantity"
+//           value={quantity}
+//           onChange={(e) => setQuantity(e.target.value)}
+//         />
+//         {errors.quantity && (
+//           <p className="errorMessage">{errors.quantity}</p>
+//         )}
+//       </div>
+//       <div className="inputFieldContainer">
+//         <input
+//           className={`inputField ${errors.purchasePrice ? "inputError" : ""}`}
+//           type="number"
+//           step="0.01"
+//           placeholder="Purchase Price"
+//           value={purchasePrice}
+//           onChange={(e) => setPurchasePrice(e.target.value)}
+//         />
+//         {errors.purchasePrice && (
+//           <p className="errorMessage">{errors.purchasePrice}</p>
+//         )}
+//       </div>
+//       <button className="submitButton" type="submit">
+//         Add Stock
+//       </button>
+//     </form>
+//     <h2>Stock List</h2>
+//     <div>
+//       <StockList />
+//     </div>
+//   </div>
+// );

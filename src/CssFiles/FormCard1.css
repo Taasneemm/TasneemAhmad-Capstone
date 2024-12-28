@@ -1,0 +1,100 @@
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+}
+
+.formCard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.inputFieldsAndBtnContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px ;
+    justify-content: center;
+    
+}
+
+/* Base style for all input fields */
+input {
+    width: 250px;
+    height: 50px; /* also applies to add stock btn */
+    font-size: large;
+    border-radius: 8px;
+    transition: transform 0.6s ease, border-color 0.6s ease, box-shadow 0.6s ease;
+    border: 2px solid #ccc;
+    border-color: white;
+  }
+
+  input:hover {
+    transform: scale(1.05);
+    border: 4px solid green;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+  button {
+    border-radius: 8px;
+    font-size: large;
+    color: white;
+    background-color: green;
+    font-weight: bold;
+    border-color: white;
+    border: 2px solid #ccc;
+    width: 150px;
+    height: 50px;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+  }
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+/* To simulate pressing action of add stock button*/
+button:active {
+    transform: scale(0.95); /* Slightly shrink to simulate pressing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for pressed state */
+  }
+
+  .inputFieldAndErrorMsgContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align input and error message to the left */
+    justify-content: space-between; /* Space between input and error */
+    height: 100px; /* Ensure consistent height for all containers */
+  }
+  
+  .errorMessage {
+    font-size: 1.2rem; /* Adjust font size for error messages */
+    color: red;
+    margin: 0; /* Remove extra margins */
+    word-wrap: break-word;
+    max-width: 180px;
+    visibility: hidden; /* Default state: hide error messages */
+  }
+  
+  .inputError + .errorMessage {
+    visibility: visible; /* Show error message only when there's an error */
+  }
+  
+
+  /* Style for input fields with errors */
+.inputError {
+    border: 2px solid red; /* Red border for error state */
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.6); /* Optional: Red glow effect */
+  }
+
+  .inputError:hover {
+    transform: scale(1.05); /* Maintain the same hover scaling effect */
+    border: 3px solid red; /* Ensure red border remains on hover */
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.8); /* Slightly stronger red glow on hover */
+  }
+  
